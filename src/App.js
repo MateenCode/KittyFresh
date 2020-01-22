@@ -1,16 +1,20 @@
-import React, { Component } from "react";
-import "./App.css";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import HomePage from "./homepage.component";
+import "./sass/App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className='App'>
-        <HomePage />
-      </div>
-    );
-  }
+import HomePage from "./pages/homepage/homepage.component";
+import ShopPage from "./pages/shop/shop.component.jsx";
+
+function App() {
+  return (
+    <div>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
