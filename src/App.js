@@ -8,12 +8,10 @@ import ShopPage from "./pages/shop/shop.component.jsx";
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={ShopPage} />
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact path='/' component={HomePage} />
+      <Route path='/shop' component={ShopPage} />
+    </Switch>
   );
 }
 
