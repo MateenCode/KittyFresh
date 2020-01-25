@@ -15,7 +15,8 @@ class SignUp extends React.Component {
       displayName: "",
       email: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
+      error: ""
     };
   }
 
@@ -44,6 +45,7 @@ class SignUp extends React.Component {
         confirmPassword: ""
       });
     } catch (error) {
+      this.setState({ error: error.message });
       console.error(error);
     }
   };
@@ -55,7 +57,7 @@ class SignUp extends React.Component {
   };
 
   render() {
-    const { displayName, email, password, confirmPassword } = this.state;
+    const { displayName, email, password, confirmPassword, error } = this.state;
     return (
       <div className='sign-up'>
         <h2 className='title'>I do not have a account</h2>
@@ -84,6 +86,7 @@ class SignUp extends React.Component {
             onChange={this.handleChange}
             label='Password'
             required
+            error={error}
           />
           <FormInput
             type='password'
