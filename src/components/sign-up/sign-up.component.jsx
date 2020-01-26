@@ -86,7 +86,6 @@ class SignUp extends React.Component {
             onChange={this.handleChange}
             label='Password'
             required
-            error={error}
           />
           <FormInput
             type='password'
@@ -94,6 +93,7 @@ class SignUp extends React.Component {
             value={confirmPassword}
             onChange={this.handleChange}
             label='Confirm Password'
+            error={error}
             required
           />
           <CustomButton type='submit'>SIGN UP</CustomButton>
