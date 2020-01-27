@@ -20,7 +20,6 @@ const mapDispatchToProps = dispatch => ({
   toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 
-// Redux Selector
 const mapStateToProps = createStructuredSelector({
   itemCount: selectCartItemsCount
 });
