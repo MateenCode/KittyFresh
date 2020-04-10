@@ -3,9 +3,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { persistStore } from "redux-persist";
 import createSageMiddleware from "redux-saga";
 
-import { fetchCollectionsStart } from "./shop/shop.sagas";
-
 import rootReducer from "./root-reducer";
+import rootSaga from "./root-saga";
 
 const sagaMiddleware = createSageMiddleware();
 
@@ -16,6 +15,6 @@ export const store = createStore(
   composeWithDevTools(applyMiddleware(...middlewares))
 );
 
-sagaMiddleware.run(fetchCollectionsStart);
+sagaMiddleware.run(rootSaga);
 
 export const persistor = persistStore(store);
