@@ -1,6 +1,6 @@
 ## KittyFresh
 
-massive e-commerce application similar to Shopify using React, Redux, React Hooks, React Router, GraphQL, Context API, Firebase, Redux-Saga, Stripe + more. This is going to be a full stack app (MERN stack), using Firebase
+massive e-commerce application similar to Shopify using React, Redux, React Hooks, React Router, GraphQL, Context API, Firebase, Redux-Saga, Stripe + more. This is a full stack app (MERN stack), using Firebase.
 
 **[View Live](https://kittyfresh.herokuapp.com/)**
 
